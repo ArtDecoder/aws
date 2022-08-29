@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core'
 
 @Component({
   selector: 'aws-not-found-page',
@@ -9,4 +9,9 @@ export class NotFoundPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  @HostBinding('class')
+  get hostClass(): string[] {
+    return ['aws-not-found-page']
+  }
 }

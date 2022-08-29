@@ -1,0 +1,13 @@
+.aws-navbar {
+  background-color: #f00;
+  display: flex;
+
+  &__item {
+    color: #fff;
+    padding: .5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

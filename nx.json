@@ -39,7 +39,10 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "skipTests": true,
+      "changeDetection": "OnPush",
+      "viewEncapsulation": "None"
     }
   },
   "defaultProject": "client"

@@ -1,0 +1,23 @@
+.app-root {
+  display: grid;
+  grid-template-areas: 'header' 'navbar' 'main' 'footer';
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+
+  & aws-header {
+    grid-area: header;
+  }
+
+  & aws-navbar {
+    grid-area: navbar;
+  }
+
+  & main {
+    grid-area: main;
+    padding: .5rem;
+  }
+
+  & aws-footer {
+    grid-area: footer;
+  }
+}
