@@ -5,12 +5,12 @@ import {ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation} from
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
 
   @HostBinding('class')
   get hostClass(): string[] {
-    return ['app-root']
+    return ['aws-root']
   }
 }

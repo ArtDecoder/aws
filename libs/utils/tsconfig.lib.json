@@ -5,13 +5,6 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "baseUrl": ".",
-    "path": [
-      "@services": [
-        "services",
-        "services/*"
-      ]
-    ],
     "types": ["node"]
   },
   "exclude": [

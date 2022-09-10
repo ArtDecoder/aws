@@ -18,6 +18,9 @@
           "apps/client/src/styles.scss",
           "libs/assets/src/lib/styles/_core.scss"
         ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/grid/src/lib/dist"]
+        },
         "scripts": []
       },
       "configurations": {
