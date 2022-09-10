@@ -19,7 +19,10 @@
           "libs/assets/src/lib/styles/_core.scss"
         ],
         "stylePreprocessorOptions": {
-          "includePaths": ["libs/grid/src/lib/dist"]
+          "includePaths": [
+            "libs/grid/src/lib/dist",
+            "libs/grid/src/lib/dist/*"
+          ]
         },
         "scripts": []
       },
