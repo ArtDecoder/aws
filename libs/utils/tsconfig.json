@@ -11,14 +11,13 @@
     }
   ],
   "compilerOptions": {
-    "types": ["node"],
     "target": "es2020",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

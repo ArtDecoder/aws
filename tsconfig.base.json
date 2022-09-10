@@ -18,7 +18,11 @@
       "@aws/assets": ["libs/assets/src/index.ts"],
       "@aws/core": ["libs/core/src/index.ts"],
       "@aws/grid": ["libs/grid/src/index.ts"],
-      "@aws/ui": ["libs/ui/src/index.ts"]
+      "@aws/ui": ["libs/ui/src/index.ts"],
+      "@aws/utils": [
+        "libs/utils/src",
+        "libs/utils/src/*"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

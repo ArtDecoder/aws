@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "compilerOptions": {
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@aws/grid": [
+        "libs/grid/src",
+        "libs/grid/src/*"
+      ],
+      "@aws/utils": [
+        "libs/utils/src",
+        "libs/utils/src/*"
+      ]
+    }
+  }
+}

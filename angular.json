@@ -7,6 +7,7 @@
     "client-e2e": "apps/client-e2e",
     "core": "libs/core",
     "grid": "libs/grid",
-    "ui": "libs/ui"
+    "ui": "libs/ui",
+    "utils": "libs/utils"
   }
 }
