@@ -1,8 +1,8 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
 import {inspect} from 'util'
-import {GridConfigInterface} from '../grid-config.interface'
-import {NameInterface} from '../name.interface'
+import {GridConfigInterface} from '../interfaces/grid-config.interface'
+import {NameInterface} from '../interfaces/name.interface'
 
 export function generateBreakpoints(dest: string,
                                     config: GridConfigInterface,

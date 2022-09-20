@@ -1,7 +1,7 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import {GridConfigInterface} from '../grid-config.interface'
-import {NameInterface} from '../name.interface'
+import {GridConfigInterface} from '../interfaces/grid-config.interface'
+import {NameInterface} from '../interfaces/name.interface'
 
 export function generateEnum(dest: string,
                              config: GridConfigInterface,

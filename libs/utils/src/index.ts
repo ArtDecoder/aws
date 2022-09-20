@@ -1,1 +1,1 @@
-export * from './lib/prittier-format/prittier-format'
+export * from './lib/format-with-prettier/format-with-prettier'

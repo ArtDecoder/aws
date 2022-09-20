@@ -1,4 +1,4 @@
-import {GridConfigInterface} from './grid-config.interface'
+import {GridConfigInterface} from './interfaces/grid-config.interface'
 
 export const gridConfig: GridConfigInterface = {
   filename: '_smart-grid',
