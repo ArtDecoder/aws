@@ -1,6 +1,6 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import {NameInterface} from '../name.interface'
+import {NameInterface} from '../interfaces/name.interface'
 
 export function generateBreakpointsType(dest: string,
                                         className: NameInterface,

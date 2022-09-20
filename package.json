@@ -8,7 +8,8 @@
     "serve": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "grid:generate": "ts-node --project tsconfig.node.json -r tsconfig-paths/register libs/grid/src/lib/main.ts"
+    "grid:generate": "ts-node --project libs/grid/src/lib/tsconfig.json libs/grid/src/lib/main.ts",
+    "icons:generate": "ts-node --project libs/icons/src/lib/tsconfig.json libs/icons/src/lib/main.ts"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +43,7 @@
     "@nrwl/workspace": "14.5.10",
     "@types/jest": "27.4.1",
     "@types/node": "^18.7.14",
+    "@types/svgo": "^2.6.4",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "cypress": "^10.2.0",
@@ -50,9 +52,15 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.5.1",
     "jest-preset-angular": "~11.1.2",
+    "ng-packagr": "~14.1.0",
     "nx": "14.5.10",
+    "postcss": "^8.4.5",
+    "postcss-import": "~14.1.0",
+    "postcss-preset-env": "~7.5.0",
+    "postcss-url": "~10.1.3",
     "prettier": "^2.6.2",
     "smart-grid": "^2.1.2",
+    "svgo": "^2.8.0",
     "ts-jest": "27.1.4",
     "ts-node": "^10.9.1",
     "typescript": "~4.7.2"

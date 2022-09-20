@@ -10,7 +10,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2017", "ES2021.String", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -18,11 +18,12 @@
       "@aws/assets": ["libs/assets/src/index.ts"],
       "@aws/core": ["libs/core/src/index.ts"],
       "@aws/grid": ["libs/grid/src/index.ts"],
+      "@aws/icons": [
+        "libs/icons/src",
+        "libs/icons/src/*"
+      ],
       "@aws/ui": ["libs/ui/src/index.ts"],
-      "@aws/utils": [
-        "libs/utils/src",
-        "libs/utils/src/*"
-      ]
+      "@aws/utils": ["libs/utils/src", "libs/utils/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

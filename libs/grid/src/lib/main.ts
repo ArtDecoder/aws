@@ -1,10 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+import {formatWithPrettier} from '@aws/utils'
 import {resolve} from 'path'
-// @ts-ignore
-import * as smartGrid from 'smart-grid'
-import {formatWithPrettier} from '../../../utils/src/lib/prittier-format/format-with-prettier'
+import smartGrid from 'smart-grid'
 import {gridConfig} from './grid-config'
-import {NameInterface} from './name.interface'
+import {NameInterface} from './interfaces/name.interface'
 import {generateBreakpoints} from './scripts/generate-breakpoints'
 import {generateBreakpointsType} from './scripts/generate-breakpoints-type'
 import {generateEnum} from './scripts/generate-enum'
