@@ -8,7 +8,6 @@ import {ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation} from
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-
   @HostBinding('class')
   get hostClass(): string[] {
     return ['aws-root']
