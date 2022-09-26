@@ -15,6 +15,9 @@ export class BreakpointService implements OnDestroy {
 
   constructor(@Inject(PLATFORM_ID) private readonly _platformId: StaticProvider[]) {
     this.subscribeToWindowResize()
+    this._breakpoint$.next(
+      this.getBreakpointFromWindowSize(window.innerWidth)
+    )
   }
 
   ngOnDestroy(): void {

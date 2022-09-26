@@ -13,14 +13,32 @@
 
   &__body {
     @include col();
-    @include size(12)
+    @include size(12);
   }
 
   &__item {
+    border: 1px solid transparent;
+    border-radius: .25rem;
     color: #fff;
-    padding: .5rem;
+    display: inline-block;
+    padding: .75rem .5rem;
 
     &:hover {
+      border: 1px groove #aaa;
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    font-size: 1.25rem;
+    background-color: #f00;
+    border: 1px groove #a75;
+    border-radius: .25rem;
+    color: #aaa;
+
+    &:hover {
+      border: 1px groove #aaa;
+      color: #fff;
       cursor: pointer;
     }
   }
