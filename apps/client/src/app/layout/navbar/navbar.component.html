@@ -1,8 +1,22 @@
 <div class="aws-navbar__wrapper">
   <div class="aws-navbar__row">
     <nav class="aws-navbar__body">
-      <a routerLink="" class="aws-navbar__item">home</a>
-      <a routerLink="about" class="aws-navbar__item">about</a>
+
+      <ng-template [ngIf]="(isSmallScreen$ | async) === false">
+        <a routerLink="" class="aws-navbar__item">home</a>
+        <a routerLink="about" class="aws-navbar__item">about</a>
+      </ng-template>
+
+      <ng-template [ngIf]="isSmallScreen$ | async">
+        <button
+          #toggleButton
+          class="aws-navbar__toggle"
+          (click)="onToggleButtonClick()"
+        >
+          <aws-svg [src]="toggleButtonIcon"></aws-svg>
+        </button>
+      </ng-template>
+
     </nav>
   </div>
 </div>
