@@ -13,13 +13,24 @@
         "polyfills": "apps/client/src/polyfills.ts",
         "tsConfig": "apps/client/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+        "assets": [
+          "apps/client/src/favicon.ico",
+          "apps/client/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/assets/src/lib/fonts",
+            "output": "fonts"
+          }
+          ],
         "styles": [
           "apps/client/src/styles.scss",
           "libs/assets/src/lib/styles/_core.scss"
         ],
         "stylePreprocessorOptions": {
-          "includePaths": ["libs/grid/src/lib/dist", "libs/grid/src/lib/dist/*"]
+          "includePaths": [
+            "libs/grid/src/lib/dist",
+           "libs/assets/src/lib/styles"
+          ]
         },
         "scripts": []
       },

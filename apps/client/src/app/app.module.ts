@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
+import {SvgModule} from '@aws/ui'
 import {AppRoutingModule} from './app-routing.module'
 
 import {AppComponent} from './app.component'
@@ -15,6 +16,7 @@ import {NavbarModule} from './layout/navbar/navbar.module'
     HeaderModule,
     NavbarModule,
     FooterModule,
+    SvgModule
   ],
   providers: [],
   bootstrap: [AppComponent],
