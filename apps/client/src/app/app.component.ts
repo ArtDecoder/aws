@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation} from '@angular/core'
+import {MetaService} from '@aws/core'
 
 @Component({
   selector: 'aws-root',
@@ -8,6 +9,9 @@ import {ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation} from
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  constructor(private readonly _metaService: MetaService) {
+  }
+
   @HostBinding('class')
   get hostClass(): string[] {
     return ['aws-root']

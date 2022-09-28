@@ -1,19 +1,41 @@
 import {NgModule} from '@angular/core'
-import {RouterModule, Routes} from '@angular/router'
+import {RouterModule} from '@angular/router'
+import {AppRouteInterface} from '@aws/core'
 import {AboutPageComponent} from './pages/about-page/about-page.component'
+import {ContactsPageComponent} from './pages/contacts-page/contacts-page.component'
 import {HomePageComponent} from './pages/home-page/home-page.component'
 import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component'
 
-const routes: Routes = [
+const routes: AppRouteInterface[] = [
   {
     path: '',
     component: HomePageComponent,
     pathMatch: 'full',
+    data: {
+      meta: {
+        title: 'Главная',
+      },
+    },
+  },
+  {
+    path: 'contacts',
+    component: ContactsPageComponent,
+    pathMatch: 'full',
+    data: {
+      meta: {
+        title: 'Контакты',
+      },
+    },
   },
   {
     path: 'about',
     component: AboutPageComponent,
     pathMatch: 'full',
+    data: {
+      meta: {
+        title: 'О Нас',
+      },
+    },
   },
   {
     path: '**',

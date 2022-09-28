@@ -8,6 +8,8 @@ import {
   Output,
   QueryList,
   Renderer2,
+  TemplateRef,
+  ViewChild,
   ViewChildren,
   ViewEncapsulation,
 } from '@angular/core'
@@ -23,7 +25,6 @@ import {map, Observable} from 'rxjs'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-
   @Input()
   set toggleButtonAreaLabel(value: string) {
     if (value && this._toggleButtonQl.first) {
@@ -38,11 +39,19 @@ export class NavbarComponent {
   @Output()
   toggleButtonClick: EventEmitter<void> = new EventEmitter<void>()
 
+  @ViewChild('smallScreen', {read: TemplateRef, static: true})
+  private _smallScreenTemplateRef!: TemplateRef<HTMLElement>
+
+  @ViewChild('largeScreen', {read: TemplateRef, static: true})
+  private _largeScreenTemplateRef!: TemplateRef<HTMLElement>
+
   @ViewChildren('toggleButton', {read: ElementRef})
   private _toggleButtonQl!: QueryList<ElementRef>
 
-  constructor(private readonly _renderer: Renderer2,
-              private readonly _breakpointService: BreakpointService) {
+  constructor(
+    private readonly _renderer: Renderer2,
+    private readonly _breakpointService: BreakpointService,
+  ) {
   }
 
   @HostBinding('class')
@@ -54,17 +63,17 @@ export class NavbarComponent {
     return awsIconMenuLarge
   }
 
-  get isSmallScreen$(): Observable<boolean> {
-    return this._breakpointService.breakpoint$
-      .pipe(
-        map(bp => {
-          return bp === BreakpointEnum.sm || bp === BreakpointEnum.xs
-        }),
-      )
+  get template$(): Observable<TemplateRef<HTMLElement>> {
+    return this._breakpointService.breakpoint$.pipe(
+      map((bp) => {
+        return bp === BreakpointEnum.sm || bp === BreakpointEnum.xs
+          ? this._smallScreenTemplateRef
+          : this._largeScreenTemplateRef
+      }),
+    )
   }
 
   onToggleButtonClick(): void {
     this.toggleButtonClick.emit()
   }
-
 }
