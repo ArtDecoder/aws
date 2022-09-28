@@ -1,22 +1,44 @@
+<ng-template #smallScreen>
+  <button
+    #toggleButton
+    class="aws-navbar__toggle"
+    (click)="onToggleButtonClick()"
+  >
+    <aws-svg [src]="toggleButtonIcon"></aws-svg>
+  </button>
+</ng-template>
+
+<ng-template #largeScreen>
+  <a
+    routerLink=""
+    routerLinkActive="aws-navbar__item_active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="aws-navbar__item"
+  >
+    Главная
+  </a>
+  <a
+    routerLink="contacts"
+    routerLinkActive="aws-navbar__item_active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="aws-navbar__item"
+  >
+    Контакты
+  </a>
+  <a
+    routerLink="about"
+    routerLinkActive="aws-navbar__item_active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="aws-navbar__item"
+  >
+    О Нас
+  </a>
+</ng-template>
+
 <div class="aws-navbar__wrapper">
   <div class="aws-navbar__row">
     <nav class="aws-navbar__body">
-
-      <ng-template [ngIf]="(isSmallScreen$ | async) === false">
-        <a routerLink="" class="aws-navbar__item">home</a>
-        <a routerLink="about" class="aws-navbar__item">about</a>
-      </ng-template>
-
-      <ng-template [ngIf]="isSmallScreen$ | async">
-        <button
-          #toggleButton
-          class="aws-navbar__toggle"
-          (click)="onToggleButtonClick()"
-        >
-          <aws-svg [src]="toggleButtonIcon"></aws-svg>
-        </button>
-      </ng-template>
-
+      <ng-container [ngTemplateOutlet]="template$ | async"></ng-container>
     </nav>
   </div>
 </div>

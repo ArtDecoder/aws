@@ -1,8 +1,8 @@
-import { Injectable, OnDestroy } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router'
-import { filter, map, mergeMap, Observable, Subject, takeUntil } from 'rxjs'
-import { AppRouteDataInterface } from '../interfaces'
+import {Injectable, OnDestroy} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router'
+import {filter, map, mergeMap, Observable, Subject, takeUntil} from 'rxjs'
+import {AppRouteDataInterface} from '../interfaces'
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ export class MetaService implements OnDestroy {
   constructor(
     private readonly _titleService: Title,
     private readonly _router: Router,
-    private readonly _activatedRoute: ActivatedRoute
+    private readonly _activatedRoute: ActivatedRoute,
   ) {
     this.subscribeToRouterNavigationEndEvent()
   }
@@ -36,10 +36,9 @@ export class MetaService implements OnDestroy {
         mergeMap((route): Observable<AppRouteDataInterface> => {
           return route.data
         }),
-        takeUntil(this._destroy$)
+        takeUntil(this._destroy$),
       )
       .subscribe((data) => {
-        console.log('NavigationEnd:', data)
         if (data.meta && data.meta.title) {
           this._titleService.setTitle(data.meta.title)
         }
