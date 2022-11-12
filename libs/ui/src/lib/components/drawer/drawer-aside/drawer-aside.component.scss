@@ -1,0 +1,26 @@
+.aws-drawer-aside {
+  background-color: #f0f;
+  display: none;
+  position: absolute;
+  z-index: 999;
+
+  &_left {
+    left: 0;
+    top: 0;
+  }
+
+  &_right {
+    right: 0;
+    top: 0;
+  }
+
+  &_top {
+    left: 0;
+    top: 0;
+  }
+
+  &_bottom {
+    bottom: 0;
+    left: 0;
+  }
+}

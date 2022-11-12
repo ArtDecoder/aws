@@ -1,13 +1,25 @@
 <aws-header></aws-header>
 
-<aws-navbar></aws-navbar>
+<aws-navbar
+  (toggleButtonClick)="onNavbarToggleButtonClick()"
+>
+</aws-navbar>
 
-<div class="aws-root__content">
-  <div class="aws-root__content-row">
-    <main class="aws-root__content-main">
+<aws-drawer [asideSize]="320"
+            [autoClose]="true"
+            (startOpen)="onDrawerStartOpen()"
+            (startClose)="onDrawerStartClose()"
+>
+
+  <aws-drawer-aside>
+    <aside>aside menu</aside>
+  </aws-drawer-aside>
+
+  <aws-drawer-content>
+    <main>
       <router-outlet></router-outlet>
     </main>
-  </div>
-</div>
+  </aws-drawer-content>
+</aws-drawer>
 
 <aws-footer></aws-footer>

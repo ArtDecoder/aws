@@ -1,4 +1,5 @@
-import { BreakpointEnum } from './breakpoint.enum'
+import {BreakpointEnum} from './breakpoint.enum'
 
-export type BreakpointsType = {[key in keyof typeof BreakpointEnum]: {minWidth: number, maxWidth: number}
+export type BreakpointsType = {
+  [key in keyof typeof BreakpointEnum]: { minWidth: number, maxWidth: number }
 }

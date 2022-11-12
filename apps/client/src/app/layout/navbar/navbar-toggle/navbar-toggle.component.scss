@@ -1,0 +1,30 @@
+.aws-navbar-toggle {
+  background-color: #f00;
+  border: 1px groove #a75;
+  outline: none;
+  box-shadow: none;
+  border-radius: .25rem;
+  color: #aaa;
+  display: inline-block;
+
+  &_active {
+    background-color: orange;
+    color: #f00;
+  }
+
+  &.aws-navbar-toggle_active :hover, :hover {
+    cursor: pointer;
+  }
+
+  &:hover:not(.aws-navbar-toggle_active) {
+    border: 1px groove #aaa;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__button {
+    background-color: transparent;
+    font-size: 1.25rem;
+
+  }
+}

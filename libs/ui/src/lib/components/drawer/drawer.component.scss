@@ -1,0 +1,23 @@
+.aws-drawer {
+  display: block;
+  height: 100%;
+  min-height: 20rem;
+  overflow: hidden;
+
+  &__drawer {
+    height: 100%;
+    position: relative;
+  }
+
+  &__backdrop {
+    background-color: rgba(0, 0, 0, .75);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 998;
+  }
+
+}
