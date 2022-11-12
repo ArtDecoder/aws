@@ -1,0 +1,8 @@
+export enum StateMachineEventEnum {
+  TOGGLE = 'TOGGLE',
+  OPEN = 'OPEN',
+  CLOSE = 'CLOSE',
+  ANIMATION_START = 'ANIMATION_START',
+  ANIMATION_DONE = 'ANIMATION_DONE',
+  INPUT_CHANGE = 'INPUT_CHANGE',
+}

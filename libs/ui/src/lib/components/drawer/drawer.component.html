@@ -1,0 +1,12 @@
+<div class="aws-drawer__drawer">
+
+  <div *ngIf="hasBackdrop$ | async"
+       @backdrop
+       class="aws-drawer__backdrop"
+       #backdrop
+    >
+  </div>
+
+  <ng-content select="aws-drawer-aside"></ng-content>
+  <ng-content select="aws-drawer-content"></ng-content>
+</div>

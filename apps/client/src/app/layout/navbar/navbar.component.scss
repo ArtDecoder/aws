@@ -35,17 +35,5 @@
 
   }
 
-  &__toggle {
-    background-color: #f00;
-    border: 1px groove #a75;
-    border-radius: .25rem;
-    color: #aaa;
-    font-size: 1.25rem;
 
-    &:hover {
-      border: 1px groove #aaa;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
 }

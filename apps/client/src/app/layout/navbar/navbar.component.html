@@ -1,11 +1,8 @@
 <ng-template #smallScreen>
-  <button
-    #toggleButton
-    class="aws-navbar__toggle"
+  <aws-navbar-toggle
     (click)="onToggleButtonClick()"
   >
-    <aws-svg [src]="toggleButtonIcon"></aws-svg>
-  </button>
+  </aws-navbar-toggle>
 </ng-template>
 
 <ng-template #largeScreen>
