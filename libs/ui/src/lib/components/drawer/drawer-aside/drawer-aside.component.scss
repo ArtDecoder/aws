@@ -1,5 +1,9 @@
+@import "colors";
+
 .aws-drawer-aside {
-  background-color: #f0f;
+  background-color: $gray-900;
+  border: 1px groove $gray-600;
+  border-radius: .25rem;
   display: none;
   position: absolute;
   z-index: 999;

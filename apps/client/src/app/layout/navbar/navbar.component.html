@@ -32,10 +32,8 @@
   </a>
 </ng-template>
 
-<div class="aws-navbar__wrapper">
-  <div class="aws-navbar__row">
-    <nav class="aws-navbar__body">
-      <ng-container [ngTemplateOutlet]="template$ | async"></ng-container>
-    </nav>
-  </div>
+<div class="aws-navbar__container">
+  <nav class="aws-navbar__body">
+    <ng-container [ngTemplateOutlet]="template$ | async"></ng-container>
+  </nav>
 </div>

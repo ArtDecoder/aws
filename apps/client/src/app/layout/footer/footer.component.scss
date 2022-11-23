@@ -1,20 +1,10 @@
-@import "_smart-grid";
-
 .aws-footer {
-  background-color: #000;
-  color: #fff;
   display: block;
+  background-color: #000;
    padding-top: 2rem;
   padding-bottom: 2rem;
-  &__wrapper {
-    @include wrapper();
-  }
-  &__row {
-    @include row-flex();
-  }
 
   &__body {
-    @include col();
-    @include size(12);
+    font-size: 2rem;
   }
 }

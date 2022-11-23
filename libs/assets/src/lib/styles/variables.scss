@@ -1,0 +1,21 @@
+// Prefix for :root CSS variables
+$variable-prefix: aws- !default;
+$prefix: $variable-prefix !default;
+
+$fontFamily: "Roboto";
+
+// Минимальная ширина страницы
+$minWidth: 320;
+
+// Ширина макета
+$maxWidth: 1920;
+
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1170;
+
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;

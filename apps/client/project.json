@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/client",
         "index": "apps/client/src/index.html",
@@ -21,15 +23,14 @@
             "input": "libs/assets/src/lib/fonts",
             "output": "fonts"
           }
-          ],
+        ],
         "styles": [
-          "apps/client/src/styles.scss",
-          "libs/assets/src/lib/styles/_core.scss"
+          "libs/assets/src/lib/styles/styles.scss"
         ],
         "stylePreprocessorOptions": {
           "includePaths": [
             "libs/grid/src/lib/dist",
-           "libs/assets/src/lib/styles"
+            "libs/assets/src/lib/styles"
           ]
         },
         "scripts": []
@@ -88,12 +89,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/client/**/*.ts", "apps/client/**/*.html"]
+        "lintFilePatterns": [
+          "apps/client/**/*.ts",
+          "apps/client/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/client"],
+      "outputs": [
+        "coverage/apps/client"
+      ],
       "options": {
         "jestConfig": "apps/client/jest.config.ts",
         "passWithNoTests": true
