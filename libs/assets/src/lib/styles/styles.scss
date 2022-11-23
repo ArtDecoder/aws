@@ -1,0 +1,35 @@
+@use "sass:math";
+
+@import "fonts";
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "normalize";
+
+html, body {
+  background-color: #161616;
+  color: $gray-100;
+  font-family: $fontFamily;
+  min-width: $minWidth + px;
+  @include adaptiveValue("font-size", 16, 10);
+}
+
+[class*="__container"] {
+  @if ($maxWidthContainer>0) {
+    max-width: rem($maxWidthContainer);
+    box-sizing: content-box;
+    margin: 0 auto;
+  }
+  @if ($containerPadding>0) {
+    padding: 0 rem(math.div($containerPadding, 2));
+    //@include adaptiveValue(padding-left, 15, 5);
+    //@include adaptiveValue(padding-right, 15, 5);
+  }
+}
+
+
+
+
+
+
+

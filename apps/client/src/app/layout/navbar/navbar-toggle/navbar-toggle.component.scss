@@ -1,24 +1,36 @@
+@import "colors";
+
 .aws-navbar-toggle {
-  background-color: #f00;
-  border: 1px groove #a75;
-  outline: none;
-  box-shadow: none;
+  background-color: $red;
+  border: 1px groove $red-300;
   border-radius: .25rem;
-  color: #aaa;
+  box-shadow: none;
+  color: $gray-200;
   display: inline-block;
+  outline: none;
 
   &_active {
-    background-color: orange;
-    color: #f00;
+    background-color: rgba($red-300, .3);
+    color: $white;
+
+    & svg {
+      filter: drop-shadow(1px 1px rgba(0, 0, 0, .1));
+    }
   }
 
   &.aws-navbar-toggle_active :hover, :hover {
+    color: $white;
     cursor: pointer;
+
+    & svg {
+      filter: drop-shadow(1px 1px rgba(0, 0, 0, .1));
+    }
   }
 
   &:hover:not(.aws-navbar-toggle_active) {
-    border: 1px groove #aaa;
-    color: #fff;
+    background-color: rgba($red-300, .5);
+    border: 1px groove $red-300;
+    color: $white;
     cursor: pointer;
   }
 
